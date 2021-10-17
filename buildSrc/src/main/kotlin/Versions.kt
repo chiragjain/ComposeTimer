@@ -53,6 +53,8 @@ object Versions {
         const val extJunit = "1.1.2"
         const val espressoCore = "3.3.0"
         const val shots = "5.11.2"
+        const val coroutinesTest = "1.5.1"
+        const val coreTest = "2.1.0"
     }
     internal object Accompanist {
         const val insetsVersion = "0.18.0"

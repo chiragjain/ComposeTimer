@@ -77,4 +77,6 @@ object TestLibs {
     const val junitExt = "androidx.test.ext:junit:${Versions.TestLibs.extJunit}"
     const val esspressoCore = "androidx.test.espresso:espresso-core:${Versions.TestLibs.espressoCore}"
     const val shots = "com.karumi:shot:${Versions.TestLibs.shots}"
+    const val corotinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.TestLibs.coroutinesTest}"
+    const val coreTest = "androidx.arch.core:core-testing:${Versions.TestLibs.coreTest}"
 }

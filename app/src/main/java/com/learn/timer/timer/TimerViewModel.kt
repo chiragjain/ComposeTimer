@@ -4,12 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
-class TimerViewModel : ViewModel() {
+class TimerViewModel(private val defaultDispatcher: CoroutineDispatcher = Dispatchers.IO) : ViewModel() {
 
     private val _timerCount = MutableLiveData<String>()
     val timerCount: LiveData<String> = _timerCount
@@ -28,15 +25,16 @@ class TimerViewModel : ViewModel() {
 
     fun toggleTimerState() {
         if (_isTimerRunning.value == false) {
+            _isTimerRunning.value = true
             startTimer()
         } else {
+            _isTimerRunning.value = false
             job?.cancel()
         }
-        _isTimerRunning.value = _isTimerRunning.value?.not()
     }
 
     private fun startTimer() {
-        job = viewModelScope.launch(Dispatchers.IO) {
+        job = viewModelScope.launch(defaultDispatcher) {
             while (_isTimerRunning.value == true) {
                 delay(1_000)
                 if (counter == MAX_TIME) {

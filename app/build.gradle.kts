@@ -70,8 +70,11 @@ dependencies {
     kapt(Google.Hilt.compiler)
 
     testImplementation(TestLibs.junit)
+    testImplementation(TestLibs.corotinesTest)
+    testImplementation(TestLibs.coreTest)
     androidTestImplementation(TestLibs.junitExt)
     androidTestImplementation(Compose.uiTestJunit4)
     androidTestImplementation(TestLibs.esspressoCore)
+
 
 }
