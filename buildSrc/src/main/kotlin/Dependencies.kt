@@ -19,6 +19,7 @@ object Kotlin {
     const val reflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.Kotlin.core}"
     object Coroutines {
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Kotlin.coroutines}"
+        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Kotlin.andoridCoroutines}"
     }
 }
 
@@ -45,7 +46,7 @@ object Compose {
     const val activity = "androidx.activity:activity-compose:${Versions.Compose.activity}"
     const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.Compose.viewModel}"
     const val paging = "androidx.paging:paging-compose:${Versions.Compose.paging}"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:${Versions.Compose.contraintLayout}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:${Versions.Compose.constraintLayout}"
     const val lottie = "com.airbnb.android:lottie-compose:${Versions.Compose.lottie}"
     const val activityCompose = "androidx.activity:activity-compose:1.3.0-alpha08"
 }

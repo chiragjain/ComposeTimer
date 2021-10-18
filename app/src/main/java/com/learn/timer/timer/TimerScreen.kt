@@ -62,7 +62,7 @@ private fun TimerTopAppBar() {
 }
 
 @Composable
-private fun TimerScreenUI(
+fun TimerScreenUI(
     timerString: String,
     isTimerRunning: Boolean,
     toggleTimer: () -> Unit,
@@ -136,7 +136,7 @@ private fun ResetTimerButton(resetTimer: () -> Unit) {
     ) {
         Icon(
             Icons.Filled.Replay,
-            stringResource(id = R.string.label_stop),
+            stringResource(id = R.string.label_reset),
             Modifier.size(48.dp),
             tint = Color.White
         )

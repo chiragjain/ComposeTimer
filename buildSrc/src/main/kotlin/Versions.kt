@@ -1,7 +1,7 @@
 @file:Suppress("SpellCheckingInspection")
 
 object Versions {
-    internal const val gradle = "7.1.0-alpha01"
+    internal const val gradle = "7.0.2"
 
     internal object Hotstar {
         const val buildConfigPlugin = "0.9"
@@ -13,8 +13,9 @@ object Versions {
     }
 
     internal object Kotlin {
-        const val core = "1.5.30"
+        const val core = "1.5.31"
         const val coroutines = "1.5.2"
+        const val andoridCoroutines = "1.3.9"
     }
 
     internal object AndroidX {
@@ -27,13 +28,13 @@ object Versions {
         const val fragmentKtx = "1.3.6"
     }
 
-    const val compose = "1.1.0-alpha04"
+    const val compose = "1.0.4"
 
     internal object Compose {
-        const val activity = "1.3.0-alpha08"
-        const val viewModel = "1.0.0-alpha07"
+        const val activity = "1.3.1 "
+        const val viewModel = "2.4.0-rc01"
         const val paging = "1.0.0-alpha11"
-        const val contraintLayout = "1.0.0-beta02"
+        const val constraintLayout = "1.0.0-rc01"
         const val lottie = "4.1.0"
     }
 

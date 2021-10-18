@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId ="com.learn.timer"
         minSdk = 21
-        targetSdk = 31
+        targetSdk = 30
         versionCode = 1
         versionName  = "1.0"
 
@@ -40,6 +40,11 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.compose
     }
+
+    packagingOptions {
+        exclude("META-INF/AL2.0")
+        exclude("META-INF/LGPL2.1")
+    }
 }
 
 dependencies {
@@ -49,6 +54,9 @@ dependencies {
     implementation(AndroidX.fragmentKtx)
     implementation(AndroidX.lifecycleRuntime)
     implementation(Google.materialDesign)
+
+    implementation(Kotlin.Coroutines.core)
+    implementation(Kotlin.Coroutines.android)
 
     implementation(Compose.ui)
     implementation(Compose.uiTooling)
@@ -75,6 +83,6 @@ dependencies {
     androidTestImplementation(TestLibs.junitExt)
     androidTestImplementation(Compose.uiTestJunit4)
     androidTestImplementation(TestLibs.esspressoCore)
-
+    debugImplementation(Compose.uiTestManifest)
 
 }
